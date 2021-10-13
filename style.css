@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.drag {
+  padding: 50px 0px 0px 0px;
+}
+
+.image-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -20px;
+}
+.image_block {
+  padding: 0 20px;
+}
+.image-item {
+  max-width: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.drag__title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+.drag__row {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0px 0px 0px;
+}
+.drag-placholder {
+  width: 300px;
+  height: 300px;
+  margin: 0px 30px 20px 0px;
+  display: flex;
+  box-shadow: 2px 3px 10px rgb(12, 75, 6);
+  align-items: center;
+  border-radius: 6px;
+  position: relative;
+}
+.drag-placholder:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+  box-shadow: 0px 1px 10px rgb(73, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-style: italic;
+  cursor: grab;
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0px 0px 40px 0px;
+}
+.item:active {
+  cursor: grabbing;
+}
+.text-top {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: tomato;
+  font-weight: 700;
+}
+.border {
+  border: 4px solid rgb(164, 60, 190);
+}
+.hovered {
+  display: none;
+}
+.hoverTop {
+  border-top: 1px solid red;
+}
+.pick {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: rotate(-90deg);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
